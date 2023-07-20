@@ -1,1 +1,1 @@
-hello world
+Migration is basially keeping track of all the DB changes that are needed. Once Migration is created, we can push the migration to the database or make changes to the table.
