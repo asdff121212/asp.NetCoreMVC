@@ -1,3 +1,10 @@
-Migration is basially keeping track of all the DB changes that are needed. Once Migration is created, we can push the migration to the database or make changes to the table.
-DbContext is a class in the Entity Framework, a popular Object-Relational Mapping (ORM) framework for .NET. It is a part of the Microsoft .NET ecosystem and is used to simplify and streamline database access and management in .NET applications.
+*Migration is basially keeping track of all the DB changes that are needed. Once Migration is created, we can push the migration to the database or make changes to the table.
+*DbContext is a class in the Entity Framework, a popular Object-Relational Mapping (ORM) framework for .NET. It is a part of the Microsoft .NET ecosystem and is used to simplify and streamline database access and management in .NET applications.
 In simple terms, DbContext acts as a bridge between your .NET application and the underlying database. It allows you to interact with the database using C# or VB.NET code, without having to write raw SQL queries. Instead, you work with C# classes and objects that represent database tables and entities, and Entity Framework takes care of translating your operations into SQL queries.
+Entity class:-  In the context of Entity Framework (EF) or other Object-Relational Mapping (ORM) frameworks, an entity class is used to represent a database table or a conceptually distinct entity in your application. like // 
+public class Product 
+{
+   public int ProductId {get; set;}
+   public string Name {get; set;}
+   public decimal Price {get; set}
+} // here ProductId, Name, Price reprsent columns in database. and Product is the entity class. public DbSet<Product> Products  { get; set; }, here Products is the table name in database and Product is the entity class.
