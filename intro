@@ -8,3 +8,15 @@ public class Product
    public string Name {get; set;}
    public decimal Price {get; set}
 } // here ProductId, Name, Price reprsent columns in database. and Product is the entity class. public DbSet<Product> Products  { get; set; }, here Products is the table name in database and Product is the entity class.
+
+
+*DbContext:- DbContext is a fundamental class in Entity Framework, which is an Object-Relational Mapping (ORM) framework for .NET applications. It is part of the Microsoft Entity Framework Core library, used for interacting with databases in a high-level, object-oriented manner.In Entity Framework, DbContext serves as a bridge between your application code and the database. It represents a session with the database and allows you to perform database operations such as querying, inserting, updating, and deleting data using strongly typed .NET classes (entity classes) rather than writing raw SQL queries.
+DbContext is the brain of Entity Framework Core and  does all the communications with the database.
+Its properties are:-
+--> DbSet<TEntity>:- class represents a collection for a given entity within the model and is the gateway to perform database opertions against an entity. You can use the DbSet<TEntity> property to perform various operations like querying, adding, updating, and deleting entities.
+
+--> SaveChanges:-  This method should be called when you want to save the changes made to entities in the DbContext to the database.
+
+ public DbSet<Category> Categories { get; set; } here Dbset represents the collection of entities of a specific type. here Catefory represnets a class that defines the structure of category of applcation and categories is the name of property.We can access thihs property using the name Categories from within the class or from outside if access modifier allows it.
+
+--> DbContextOptions is the class that represents options used to configure a DbContext.
